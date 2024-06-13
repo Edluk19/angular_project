@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-my-component',
@@ -10,8 +10,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MyComponentComponent implements OnInit {
   @Input() data: any;
+  @Output() addFavorite = new EventEmitter<any>();
+  @Output() addWatchList = new EventEmitter<any>();
   public movie: any;
   ngOnInit(): void {
     this.movie = this.data;
+  }
+  addToFavorites() {
+    this.addFavorite.emit(this.movie.title)
+  }
+  addToWatchList() {
+    this.addWatchList.emit(this.movie.title)
   }
 }

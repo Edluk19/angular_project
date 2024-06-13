@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+
+html,
+body {
+    height: 100%;
+
+}
+
+.wraper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-container {
+    display: flex;
+    column-gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.list-container {
+    display: flex;
+    column-gap: 600px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+
+    & list-container-item {}
+}
