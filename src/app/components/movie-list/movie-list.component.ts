@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { MovieCardsComponent } from '../movie-cards/movie-cards.component';
 import { NgFor } from '@angular/common';
+import { DurationPipe } from '../../pipes/duration/duration.pipe';
 
 @Component({
   selector: 'app-movie-list',
   standalone: true,
-  imports: [MovieCardsComponent, NgFor],
+  imports: [MovieCardsComponent, NgFor, DurationPipe],
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.scss'],
 })
@@ -19,7 +20,8 @@ export class MovieListComponent {
       release_date: "2024-05-08",
       title: "Kingdom of the Planet of the Apes",
       video: false,
-      rating: 8.5
+      rating: 8.5,
+      duration: 8650
     },
     {
       backdrop_path: "../assets/images/civil-war.jpg",
@@ -29,6 +31,7 @@ export class MovieListComponent {
       release_date: "2024-04-10",
       title: "Civil War",
       rating: 6.5,
+      duration: 9170
     },
     {
 
@@ -40,6 +43,7 @@ export class MovieListComponent {
       release_date: "2024-03-27",
       title: "Godzilla x Kong: The New Empire",
       rating: 5.5,
+      duration: 8120
     },
   ];
 

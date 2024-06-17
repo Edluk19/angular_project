@@ -1,8 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { DurationPipe } from '../../pipes/duration/duration.pipe';
+import { ReleaseDatePipe } from '../../pipes/date/release-date.pipe';
+
 
 @Component({
   selector: 'app-movie-cards',
   standalone: true,
+  imports: [DurationPipe, ReleaseDatePipe],
   templateUrl: './movie-cards.component.html',
   styleUrls: ['./movie-cards.component.scss'],
 })
