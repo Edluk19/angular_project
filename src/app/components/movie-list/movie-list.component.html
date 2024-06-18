@@ -1,9 +1,9 @@
 <div class="wraper">
     <div class="movie-container">
         <div *ngFor="let movie of movies">
-            <app-movie-cards [movie]="movie" (addFavorite)="handleAddToFavorites($event)"
+            <app-primeng-movie-card [movie]="movie" (addFavorite)="handleAddToFavorites($event)"
                 (addWatch)="handleAddToWatchlist($event)">
-            </app-movie-cards>
+            </app-primeng-movie-card>
         </div>
     </div>
     <div class="list-container">

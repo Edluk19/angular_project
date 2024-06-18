@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { MovieCardsComponent } from '../movie-cards/movie-cards.component';
+// import { MovieCardsComponent } from '../movie-cards/movie-cards.component';
 import { NgFor } from '@angular/common';
 import { DurationPipe } from '../../pipes/duration/duration.pipe';
+import { PrimengMovieCardComponent } from '../primeng-movie-card/primeng-movie-card.component';
 
 @Component({
   selector: 'app-movie-list',
   standalone: true,
-  imports: [MovieCardsComponent, NgFor, DurationPipe],
+  imports: [PrimengMovieCardComponent, NgFor, DurationPipe],
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.scss'],
 })
