@@ -1,0 +1,21 @@
+<p-card styleClass="movie-cards">
+
+    <ng-template pTemplate="header">
+        <div styleClass="image">
+            <img [src]="movie.backdrop_path" alt="{{ movie.title }}" class="movie-image">
+        </div>
+
+    </ng-template>
+
+    <div styleClass="movie-details">
+        <h2>{{ movie.title }}</h2>
+        <p> Тривалість: {{ movie.duration | duration}}</p>
+        <p>Дата виходу: {{ movie.release_date | releaseDate}}</p>
+        <p>Рейтинг: {{ movie.rating }}</p>
+    </div>
+    <ng-template pTemplate="movie-buttons">
+        <p-button (click)="onAddFavorite()" title="Улюблені">🤍</p-button>
+        <p-button (click)="onAddWatch()" title="Переглянути пізніше">🎦</p-button>
+    </ng-template>
+
+</p-card>
