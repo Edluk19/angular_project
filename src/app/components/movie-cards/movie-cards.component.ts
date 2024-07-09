@@ -15,11 +15,12 @@ export class MovieCardsComponent {
   @Output() addFavorite = new EventEmitter<any>();
   @Output() addWatch = new EventEmitter<any>();
 
-  onAddFavorite() {
-    this.addFavorite.emit(this.movie);
+  //pass up to parent - movie-list
+  addToFavorites(id: any) {
+    this.addFavorite.emit(id);
   }
 
-  onAddWatch() {
-    this.addWatch.emit(this.movie);
+  addToWatchlist(id: any) {
+    this.addWatch.emit(id);
   }
 }
