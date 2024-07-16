@@ -1,3 +1,8 @@
-<app-movie-list></app-movie-list>
+<app-primeng-sidebar></app-primeng-sidebar>
+<main>
+    <router-outlet></router-outlet>
 
-<router-outlet></router-outlet>
+    <div class="fav-watch-page">
+        <router-outlet name="header"></router-outlet>
+    </div>
+</main>

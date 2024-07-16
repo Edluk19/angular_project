@@ -1,5 +1,8 @@
 <div class="movie-cards">
-    <img [src]="movie.backdrop_path" alt="{{ movie.title }}" class="movie-image">
+    <div class="movie-cards-image">
+        <img [src]="movie.backdrop_path" alt="{{ movie.title }}" class="movie-image">
+    </div>
+
     <div class="movie-details">
         <h2>{{ movie.title }}</h2>
         <p class="movie-overview">{{ movie.overview }}</p>
@@ -8,7 +11,7 @@
         <p>Рейтинг: {{ movie.rating }}</p>
     </div>
     <div class="movie-buttons">
-        <button (click)="onAddFavorite()" title="Улюблені">🤍</button>
-        <button (click)="onAddWatch()" title="Переглянути пізніше">🎦</button>
+        <button (click)="addToFavorites(movie.id)" title="Улюблені">🤍</button>
+        <button (click)="addToWatchlist(movie.id)" title="Переглянути пізніше">🎦</button>
     </div>
 </div>

@@ -29,7 +29,7 @@ body {
 }
 
 .movie-cards {
-    width: 350px;
+    width: 200px;
     height: 30vh;
     background: rgb(63, 94, 251);
     background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgb(146, 96, 221) 100%);
@@ -46,10 +46,18 @@ body {
         object-fit: cover;
     }
 
+    & h2 {
+        font-size: 16px;
+    }
+
+    & p {
+        font-size: 12px;
+    }
+
     text-align: center;
     border-radius: 10px;
     border: 1px solid grey;
-    min-height: 650px;
+    min-height: 350px;
     transition: all 0.2s;
     user-select: none;
 
@@ -66,6 +74,10 @@ body {
             }
         }
     }
+}
+
+.movie-cards-image {
+    max-height: 50%;
 }
 
 .movie-overview {
@@ -86,7 +98,7 @@ button {
     border: none;
     background: none;
     display: inline;
-    font-size: 36px;
+    font-size: 26px;
     transition: transform 0.1s;
 
     &:hover {

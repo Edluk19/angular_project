@@ -1,0 +1,12 @@
+<p-sidebar styleClass="sidebar" [(visible)]="visibleSidebar" position="left">
+    <ul>
+
+        <li><a (click)="navigate('/popular')">Popular</a></li>
+        <li><a (click)="navigate('/now-playing')">Now Playing</a></li>
+        <li><a (click)="navigate('/top-rate')">Top Rate</a></li>
+        <li><a (click)="navigate('/upcoming')">Upcoming</a></li>
+
+    </ul>
+
+</p-sidebar>
+<p-button (click)="visibleSidebar = true" icon="pi pi-arrow-right" />
