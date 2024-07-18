@@ -16,18 +16,5 @@ import { DurationPipe } from '../../pipes/duration/duration.pipe';
 export class MovieListComponent {
   @Input() movies: any[] = [];
 
-  @Output() addFavorite = new EventEmitter<any>();
-  @Output() addWatch = new EventEmitter<any>();
 
-
-  //pass up to parent - active page
-  addToFavorites(id: any) {
-    this.addFavorite.emit(id);
-
-  }
-
-  addToWatchlist(id: any) {
-    this.addWatch.emit(id);
-
-  }
 }

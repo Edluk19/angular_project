@@ -1,7 +1,7 @@
 <div class="wraper">
     <div class="movie-container">
         <div *ngFor="let movie of movies">
-            <app-movie-cards [movie]="movie" (addFavorite)="addToFavorites($event)" (addWatch)="addToWatchlist($event)">
+            <app-movie-cards [movie]="movie">
             </app-movie-cards>
         </div>
     </div>

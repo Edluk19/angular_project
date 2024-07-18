@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DurationPipe } from '../../pipes/duration/duration.pipe';
 import { ReleaseDatePipe } from '../../pipes/date/release-date.pipe';
+import { Router } from '@angular/router';
+import { MovieService } from '../../servises/movie/movie.service';
 
 
 @Component({
@@ -12,15 +14,15 @@ import { ReleaseDatePipe } from '../../pipes/date/release-date.pipe';
 })
 export class MovieCardsComponent {
   @Input() movie: any;
-  @Output() addFavorite = new EventEmitter<any>();
-  @Output() addWatch = new EventEmitter<any>();
 
-  //pass up to parent - movie-list
-  addToFavorites(id: any) {
-    this.addFavorite.emit(id);
+  constructor(private router: Router, private movieDataService: MovieService) { }
+
+  onSelectFavMovie(movie: any) {
+    this.movieDataService.addFavMovie(movie);
+    this.router.navigate(['/favorites']);
   }
-
-  addToWatchlist(id: any) {
-    this.addWatch.emit(id);
+  onSelectWatchMovie(movie: any) {
+    this.movieDataService.addWatchMovie(movie);
+    this.router.navigate(['/watch-list']);
   }
 }

@@ -11,7 +11,7 @@
         <p>Рейтинг: {{ movie.rating }}</p>
     </div>
     <div class="movie-buttons">
-        <button (click)="addToFavorites(movie.id)" title="Улюблені">🤍</button>
-        <button (click)="addToWatchlist(movie.id)" title="Переглянути пізніше">🎦</button>
+        <button (click)="onSelectFavMovie(movie)" title="Улюблені">🤍</button>
+        <button (click)="onSelectWatchMovie(movie)" title="Переглянути пізніше">🎦</button>
     </div>
 </div>
