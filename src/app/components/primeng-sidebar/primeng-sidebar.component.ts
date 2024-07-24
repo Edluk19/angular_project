@@ -19,7 +19,7 @@ export class PrimengSidebarComponent {
   constructor(private router: Router) { }
 
   navigate(path: string) {
-    this.router.navigate([path], { replaceUrl: true });
+    this.router.navigate([path]);
   }
 }
 

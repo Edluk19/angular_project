@@ -11,15 +11,13 @@ import { WatchListPageComponent } from './pages/watch-list-page/watch-list-page.
 
 
 export const routes: Routes = [
-    { path: '', component: PopularPageComponent },
     { path: 'popular', component: PopularPageComponent },
     { path: 'now-playing', component: NowPlayingPageComponent },
     { path: 'top-rate', component: TopRatePageComponent },
     { path: 'upcoming', component: UpcomingPageComponent },
+    { path: 'favorite', component: FavoritesMoviePageComponent },
+    { path: 'watch-list', component: WatchListPageComponent },
     { path: 'movie/:id', component: MovieDetailsPageComponent },
-
-
-    { path: 'favorite', component: FavoritesMoviePageComponent, outlet: 'header' },
-    { path: 'watch-list', component: WatchListPageComponent, outlet: 'header' },
+    { path: '', redirectTo: '/popular', pathMatch: 'full' }
 
 ];

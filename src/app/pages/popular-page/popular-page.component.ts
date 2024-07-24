@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieListComponent } from '../../components/movie-list/movie-list.component';
 import { RouterLink, RouterModule } from '@angular/router';
-import { HeaderMovieComponent } from '../../components/header-movie/header-movie.component';
-import { movies } from '../../mock-data';
 import { MovieService } from '../../servises/movie/movie.service';
 
 @Component({
   selector: 'app-popular-page',
   standalone: true,
-  imports: [MovieListComponent, HeaderMovieComponent, RouterLink, RouterModule],
+  imports: [MovieListComponent, RouterLink, RouterModule],
   templateUrl: './popular-page.component.html',
   styleUrl: './popular-page.component.scss'
 })

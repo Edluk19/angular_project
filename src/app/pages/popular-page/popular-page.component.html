@@ -1,8 +1,4 @@
 <h1>Popular movies</h1>
 <div class="page-wrapper">
-    <app-header-movie [favoriteMovieIds]="favoriteMovieListIds" [watchLaterMovieIds]="watchLaterMovieListIds">
-    </app-header-movie>
-    <app-movie-list [movies]="movies" (addFavorite)="addToFavorites($event)"
-        (addWatch)="addToWatchlist($event)"></app-movie-list>
+    <app-movie-list [movies]="popularMovies"></app-movie-list>
 </div>
-<!-- <app-movie-list></app-movie-list> -->

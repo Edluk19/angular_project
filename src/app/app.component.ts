@@ -5,6 +5,7 @@ import { PrimengSidebarComponent } from './components/primeng-sidebar/primeng-si
 import { PopularPageComponent } from './pages/popular-page/popular-page.component';
 import { CommonModule } from '@angular/common';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { HeaderMovieComponent } from './components/header-movie/header-movie.component';
 // import { PrimengMovieCardComponent } from './components/primeng-movie-card/primeng-movie-card.component';
 
 @Component({
@@ -13,6 +14,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
   imports: [
     PopularPageComponent,
     PrimengSidebarComponent,
+    HeaderMovieComponent,
     CommonModule,
     RouterModule,
     RouterOutlet,
