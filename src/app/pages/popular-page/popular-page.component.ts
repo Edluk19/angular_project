@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MovieListComponent } from '../../components/movie-list/movie-list.component';
 import { RouterLink, RouterModule } from '@angular/router';
 import { MovieService } from '../../servises/movie/movie.service';
+import { Movie, MovieApiModel } from '../../models/movie.model';
 
 @Component({
   selector: 'app-popular-page',
@@ -11,26 +12,16 @@ import { MovieService } from '../../servises/movie/movie.service';
   styleUrl: './popular-page.component.scss'
 })
 export class PopularPageComponent implements OnInit {
-  popularMovies: any[] = [];
-  // favoriteMovieListIds: string[] = [];
-  // watchLaterMovieListIds: string[] = [];
+  popularMovies: Movie[] = [];
+
   constructor(private movieService: MovieService) { }
+
   ngOnInit() {
-    this.popularMovies = this.movieService.getPopularMovies();
+    this.movieService.getNowPlayingmovies().subscribe({
+      next: (response: MovieApiModel) => {
+        this.popularMovies = response.results;
+      }
+    });
   }
 
-  // addToFavorites(id: any) {
-  //   if (!this.favoriteMovieListIds.includes(id)) {
-  //     this.favoriteMovieListIds.push(id);
-  //   }
-
-
-  // }
-
-  // addToWatchlist(id: any) {
-  //   if (!this.watchLaterMovieListIds.includes(id)) {
-  //     this.watchLaterMovieListIds.push(id);
-  //   }
-
-  // }
 }

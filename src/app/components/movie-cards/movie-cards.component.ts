@@ -19,10 +19,8 @@ export class MovieCardsComponent {
 
   onSelectFavMovie(movie: any) {
     this.movieDataService.addFavMovie(movie);
-    this.router.navigate(['/favorites']);
   }
   onSelectWatchMovie(movie: any) {
     this.movieDataService.addWatchMovie(movie);
-    this.router.navigate(['/watch-list']);
   }
 }

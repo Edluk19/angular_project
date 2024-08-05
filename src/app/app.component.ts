@@ -24,7 +24,6 @@ import { HeaderMovieComponent } from './components/header-movie/header-movie.com
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  providers: [provideAnimations()]
 })
 export class AppComponent {
 
