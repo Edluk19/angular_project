@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MovieListComponent } from '../../components/movie-list/movie-list.component';
 import { RouterLink, RouterModule } from '@angular/router';
 import { MovieService } from '../../servises/movie/movie.service';
+import { Movie, MovieApiModel } from '../../models/movie.model';
 
 @Component({
   selector: 'app-upcoming-page',
@@ -11,10 +12,14 @@ import { MovieService } from '../../servises/movie/movie.service';
   styleUrl: './upcoming-page.component.scss'
 })
 export class UpcomingPageComponent {
-  upcomingMovies: any[] = [];
+  upcomingMovies: Movie[] = [];
   constructor(private movieService: MovieService) { }
   ngOnInit() {
-    this.upcomingMovies = this.movieService.getUpcomingMovies();
+    this.movieService.getNowPlayingmovies().subscribe({
+      next: (response: MovieApiModel) => {
+        this.upcomingMovies = response.results;
+      }
+    });
   }
 
 }
